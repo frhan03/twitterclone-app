@@ -33,7 +33,7 @@
                         @if (Auth::user()->follows($user))
                             <form method="POST" action="{{ route('users.unfollow', $user->id) }}">
                                 @csrf
-                                <button type="submitted" class="btn btn-danger btn-sm"> UnFollow </button>
+                                <button type="submit" class="btn btn-danger btn-sm"> UnFollow </button>
                             </form>
                         @else
                             <form method="POST" action="{{ route('users.follow', $user->id) }}">
